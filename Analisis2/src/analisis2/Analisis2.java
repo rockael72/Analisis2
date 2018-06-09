@@ -5,6 +5,11 @@
  */
 package analisis2;
 
+import usuario.Administrador;
+import usuario.General;
+import usuario.Privilegio;
+import usuario.Usuario;
+
 /**
  *
  * @author rocka
@@ -16,7 +21,7 @@ public class Analisis2 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("holamundo");
+
     }
     
 }
