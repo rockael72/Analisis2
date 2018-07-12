@@ -3,12 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package usuario;
+package modulos.Pagos;
 
 /**
  *
- * @author rocka
+ * @author USUARIO
  */
-public interface Privilegio {
-    public boolean privilegio( );
+public interface FactoryGeneral {
+    public ContructorPagos crearPago(String Tipo);
+  
 }

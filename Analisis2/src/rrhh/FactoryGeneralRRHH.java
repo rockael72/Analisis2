@@ -3,19 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package usuario;
+package RRHH;
 
 /**
  *
- * @author rocka
+ * @author USUARIO
  */
-public class Administrador implements Privilegio{
-
-    @Override
-    public boolean privilegio() {
-        return true;
-    }
-  
-  
-    
+public interface FactoryGeneralRRHH {
+    public ConstructorRRHH TipoTrabajador(String Tipo);
 }
