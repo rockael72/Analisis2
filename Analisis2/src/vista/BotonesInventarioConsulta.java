@@ -26,9 +26,9 @@ public class BotonesInventarioConsulta extends PanelConstructor{
     
     
       public void construir(){
-        super.agregarCaracteristica("Nombre",0);
-        super.agregarCaracteristica("Buscar",3);
-        super.agregarCaracteristica("Todos", 3);
+        super.agregarCaracteristica(super.idioma.getProperty("nombre"),0);
+        super.agregarCaracteristica(super.idioma.getProperty("buscar"),3);
+        super.agregarCaracteristica(super.idioma.getProperty("todos"), 3);
      
        // ComboBox nombre = (ComboBox) super.getComponent(0);
         
