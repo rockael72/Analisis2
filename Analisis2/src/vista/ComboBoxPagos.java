@@ -5,14 +5,18 @@
  */
 package vista;
 
+import analisis2.Analisis2;
+import idioma.Idioma;
+
 /**
  *
  * @author rocka
  */
 public class ComboBoxPagos extends ComboBox{
-     
+     private Idioma idioma;
     public ComboBoxPagos() {
         super();
+        this.idioma=Analisis2.idioma;
         this.item();
         this.evento();
     }
@@ -23,8 +27,8 @@ public class ComboBoxPagos extends ComboBox{
     }
     
     public void item(){
-        super.addItem("Fijos");
-        super.addItem("Variables"); 
+        super.addItem(this.idioma.getProperty("fijo"));
+        super.addItem(this.idioma.getProperty("variable")); 
       
         
     }

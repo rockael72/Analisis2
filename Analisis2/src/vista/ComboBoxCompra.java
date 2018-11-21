@@ -5,6 +5,8 @@
  */
 package vista;
 
+import analisis2.Analisis2;
+import idioma.Idioma;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -13,9 +15,10 @@ import java.awt.event.ActionListener;
  * @author rocka
  */
 public class ComboBoxCompra extends ComboBox{
-
+    private Idioma idioma;
     public ComboBoxCompra() {
         super();
+        this.idioma=Analisis2.idioma;
         this.item();
         this.evento();
     }
@@ -26,8 +29,8 @@ public class ComboBoxCompra extends ComboBox{
     }
     
     public void item(){
-        super.addItem("Pedecedero");
-        super.addItem("NoPedecedero"); 
+        super.addItem(this.idioma.getProperty("perecedero"));
+        super.addItem(this.idioma.getProperty("noperecedero")); 
      
     }
 }

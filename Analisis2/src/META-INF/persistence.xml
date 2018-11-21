@@ -5,9 +5,9 @@
     <class>orm.OrmUsuario</class>
     <class>RRHH.EntityFormal</class>
     <class>RRHH.EntityInformal</class>
-    <class>modulos.Pagos.EntityFijos</class>
-    <class>modulos.Pagos.EntityVariables</class>
     <class>orm.OrmProducto</class>
+    <class>Pagos.EntityFijos</class>
+    <class>Pagos.EntityVariables</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/proyecto"/>
       <property name="javax.persistence.jdbc.user" value="root"/>

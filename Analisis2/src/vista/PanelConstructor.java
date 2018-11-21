@@ -5,6 +5,8 @@
  */
 package vista;
 
+import analisis2.Analisis2;
+import idioma.Idioma;
 import java.awt.Component;
 import java.awt.PopupMenu;
 import java.util.ArrayList;
@@ -17,9 +19,11 @@ import javax.swing.JPanel;
 public abstract class PanelConstructor {
     private IteradorPassword itc;
     private JPanel panel;
+    protected Idioma idioma;
     
     public PanelConstructor(JPanel panel) {
        this.panel=panel;
+       this.idioma=Analisis2.idioma;       
         this.itc= new IteradorPassword();
     }
     
@@ -27,6 +31,7 @@ public abstract class PanelConstructor {
          
     }
      
+   
    public void agregarCaracteristica(String nombre, int opcion){
        this.itc.setCaracteristica(nombre, opcion);
    }

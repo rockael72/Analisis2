@@ -5,14 +5,18 @@
  */
 package vista;
 
+import analisis2.Analisis2;
+import idioma.Idioma;
+
 /**
  *
  * @author rocka
  */
 public class ComboBoxEmpleado extends ComboBox{
-     
+     private Idioma idioma;
     public ComboBoxEmpleado() {
         super();
+        this.idioma=Analisis2.idioma;
         this.item();
         this.evento();
     }
@@ -23,7 +27,9 @@ public class ComboBoxEmpleado extends ComboBox{
     }
     
     public void item(){
-        super.addItem("Empleado Fijo");
-        super.addItem("Empleado Nominal"); 
+        //super.addItem("Empleado Fijo");
+        //super.addItem("Empleado Nominal"); 
+        super.addItem(this.idioma.getProperty("empleadofijo")); 
+        super.addItem(this.idioma.getProperty("empleadonominal"));
     }
 }

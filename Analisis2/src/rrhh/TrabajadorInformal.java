@@ -7,8 +7,8 @@ package RRHH;
 
 import conexion.Conexion;
 import java.util.ArrayList;
-import modulos.Pagos.EntityFijos;
-import modulos.Pagos.EntityFijosJpaController;
+import Pagos.EntityFijos;
+import Pagos.EntityFijosJpaController;
 
 /**
  *

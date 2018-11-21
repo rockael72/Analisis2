@@ -5,7 +5,9 @@
  */
 package proyecto;
 
+import analisis2.Analisis2;
 import conexion.Conexion;
+import idioma.Idioma;
 import javax.swing.JFrame;
 import orm.OrmUsuario;
 import orm.OrmUsuarioJpaController;
@@ -24,10 +26,14 @@ public class Login extends javax.swing.JFrame {
      */
     private DirectorPanel dp;
     private Factory f;
+    public static Idioma idioma;
+    
     public Login() {
         initComponents();
-        f= new FactoryPanel();
+        f= new FactoryPanel();        
+        idioma = Analisis2.idioma;
       dp= new DirectorPanel(f.factoryPanel(jPanel1, "Usuario"));
+      this.jButton1.setText(idioma.getProperty("aceptar"));
     }
 
     /**
@@ -103,8 +109,8 @@ public class Login extends javax.swing.JFrame {
         
        Principal p = new Principal();
        p.setTitle("Principal");
-        p.setLocationRelativeTo(null);
-        p.show();
+       p.setLocationRelativeTo(null);
+       p.show();
        this.hide();
     }//GEN-LAST:event_jButton1ActionPerformed
 

@@ -13,9 +13,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JPanel;
-import modulos.Pagos.DirectorPagos;
-import modulos.Pagos.FactoryGeneral;
-import modulos.Pagos.FactoryPagos;
+import Pagos.DirectorPagos;
+import Pagos.FactoryGeneral;
+import Pagos.FactoryPagos;
 
 /**
  *

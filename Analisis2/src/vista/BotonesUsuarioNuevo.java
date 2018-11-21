@@ -30,7 +30,7 @@ public class BotonesUsuarioNuevo extends PanelConstructor{
     
     
       public void construir(){
-        super.agregarCaracteristica("Agregar",3);
+        super.agregarCaracteristica(super.idioma.getProperty("agregar"),3);
      
       
         Button b = (Button) super.getComponent(0);

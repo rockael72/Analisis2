@@ -29,7 +29,7 @@ public class FactoryPanel implements Factory {
              case "BotonUsuarioNuevo": return new BotonesUsuarioNuevo(panel1);
              case "BotonUsuarioConsulta": return new BotonesUsuarioConsulta(panel1);
              case "BotonPermisoNuevo": return new BotonesPermisosNuevo(panel1);
-             case "BotonPagoNuevo": return new BotonesPagosNuevo(panel1);
+             case "BotonPagoNuevo": return new BotonesPagosNuevo2(panel1);
              case "Fijo": return new DatosPagosFijos(panel1);
              case "Variable": return new DatosPagoVariable(panel1);
             case "Consulta": return new Consulta(panel1);

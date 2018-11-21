@@ -5,6 +5,8 @@
  */
 package proyecto;
 
+import analisis2.Analisis2;
+import idioma.Idioma;
 import java.awt.Color;
 import vista.DirectorPanel;
 import vista.Factory;
@@ -21,12 +23,33 @@ public class Principal extends javax.swing.JFrame {
      */
     private Factory panel;
     private DirectorPanel directorPanel;
+    private Idioma idioma;
     public Principal() {
         initComponents();
         this.panel = new FactoryPanel();
+        this.idioma=Analisis2.idioma;
         DirectorPanel.setPanel1(jPanel2);
         DirectorPanel.setPanel2(jPanel3);
         this.directorPanel = new DirectorPanel();
+        this.jMenu2.setText(idioma.getProperty("compras"));
+        this.jMenu3.setText(idioma.getProperty("rrhh"));
+        this.jMenu6.setText(idioma.getProperty("pagos"));
+        this.jMenu1.setText(idioma.getProperty("inventario"));
+        this.jMenu5.setText(idioma.getProperty("permisos"));
+        this.jMenu4.setText(idioma.getProperty("usuario"));
+        this.jMenu7.setText(idioma.getProperty("idioma"));
+        this.jMenuItem3.setText(idioma.getProperty("nuevo"));
+        this.jMenuItem1.setText(idioma.getProperty("nuevo"));
+        this.jMenuItem7.setText(idioma.getProperty("nuevo"));        
+        this.jMenuItem4.setText(idioma.getProperty("consulta"));
+        this.jMenuItem6.setText(idioma.getProperty("consulta"));
+        this.jMenuItem2.setText(idioma.getProperty("consulta"));
+        this.jMenuItem8.setText(idioma.getProperty("consulta"));   
+        this.jMenuItem5.setText(idioma.getProperty("agregar"));
+        this.jMenuItem9.setText(idioma.getProperty("modificar"));
+        this.jMenuItem10.setText(idioma.getProperty("espanol"));
+        this.jMenuItem11.setText(idioma.getProperty("ingles"));
+        
         //this.directorPanel = new DirectorPanel(this.panel.factoryPanel(DirectorPanel.getPanel2(), "Usuario"));       
         //this.jPanel3.removeAll();
         
@@ -46,21 +69,24 @@ public class Principal extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenuItem6 = new javax.swing.JMenuItem();
+        jMenu6 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenu5 = new javax.swing.JMenu();
+        jMenuItem9 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jMenuItem7 = new javax.swing.JMenuItem();
         jMenuItem8 = new javax.swing.JMenuItem();
-        jMenu5 = new javax.swing.JMenu();
-        jMenuItem9 = new javax.swing.JMenuItem();
-        jMenu6 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenu7 = new javax.swing.JMenu();
+        jMenuItem10 = new javax.swing.JMenuItem();
+        jMenuItem11 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -98,18 +124,6 @@ public class Principal extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 20, Short.MAX_VALUE)
         );
-
-        jMenu1.setText("Inventario");
-
-        jMenuItem2.setText("Consulta");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
-            }
-        });
-        jMenu1.add(jMenuItem2);
-
-        jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Compras");
 
@@ -151,6 +165,42 @@ public class Principal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu3);
 
+        jMenu6.setText("Pagos");
+
+        jMenuItem1.setText("Nuevo");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu6.add(jMenuItem1);
+
+        jMenuBar1.add(jMenu6);
+
+        jMenu1.setText("Inventario");
+
+        jMenuItem2.setText("Consulta");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem2);
+
+        jMenuBar1.add(jMenu1);
+
+        jMenu5.setText("Permisos");
+
+        jMenuItem9.setText("Modificar");
+        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem9ActionPerformed(evt);
+            }
+        });
+        jMenu5.add(jMenuItem9);
+
+        jMenuBar1.add(jMenu5);
+
         jMenu4.setText("Usuario");
 
         jMenuItem7.setText("Nuevo");
@@ -171,29 +221,25 @@ public class Principal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu4);
 
-        jMenu5.setText("Permisos");
+        jMenu7.setText("Idioma");
 
-        jMenuItem9.setText("Modificar");
-        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem10.setText("jMenuItem10");
+        jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem9ActionPerformed(evt);
+                jMenuItem10ActionPerformed(evt);
             }
         });
-        jMenu5.add(jMenuItem9);
+        jMenu7.add(jMenuItem10);
 
-        jMenuBar1.add(jMenu5);
-
-        jMenu6.setText("Pagos");
-
-        jMenuItem1.setText("Nuevo");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem11.setText("jMenuItem11");
+        jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                jMenuItem11ActionPerformed(evt);
             }
         });
-        jMenu6.add(jMenuItem1);
+        jMenu7.add(jMenuItem11);
 
-        jMenuBar1.add(jMenu6);
+        jMenuBar1.add(jMenu7);
 
         setJMenuBar(jMenuBar1);
 
@@ -276,6 +322,30 @@ public class Principal extends javax.swing.JFrame {
         this.jPanel3.repaint();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
+    private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
+        // TODO add your handling code here:
+        Analisis2.idioma = new Idioma("Espanol");
+        this.repaint();        
+          Principal p = new Principal();
+       p.setTitle("Principal");
+       p.setLocationRelativeTo(null);
+       p.show();
+        System.out.println("hola");
+        this.hide();
+    }//GEN-LAST:event_jMenuItem10ActionPerformed
+
+    private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
+        // TODO add your handling code here:
+        Analisis2.idioma = new Idioma("Ingles");
+        this.repaint();        
+          Principal p = new Principal();
+       p.setTitle("Principal");
+       p.setLocationRelativeTo(null);
+       p.show();
+        System.out.println("hola");
+        this.hide();
+    }//GEN-LAST:event_jMenuItem11ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -318,8 +388,11 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenu6;
+    private javax.swing.JMenu jMenu7;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem10;
+    private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;

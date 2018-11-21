@@ -20,17 +20,17 @@ public class BotonesPermisosNuevo extends PanelConstructor{
     public BotonesPermisosNuevo(JPanel panel) {
         super(panel);
         f = new FactoryPanel();
-        dp = new DirectorPanel(f.factoryPanel(DirectorPanel.getPanel1(), "Consulta"));
+        dp = new DirectorPanel(f.factoryPanel(DirectorPanel.getPanel1(), "Consulta") );
        
         
     }
     
     
       public void construir(){
-          super.agregarCaracteristica("Usuario",0);
-        super.agregarCaracteristica("Permiso",7);
-        super.agregarCaracteristica("Modulo",8);
-        super.agregarCaracteristica("Agregar",3);
+          super.agregarCaracteristica(super.idioma.getProperty("usuario"),0);
+        super.agregarCaracteristica(super.idioma.getProperty("permisos"),7);
+        super.agregarCaracteristica(super.idioma.getProperty("modulo"),8);
+        super.agregarCaracteristica(super.idioma.getProperty("agregar"),3);
      
         ComboBox t = (ComboBox) super.getComponent(1);
         t.addActionListener(new ActionListener() {

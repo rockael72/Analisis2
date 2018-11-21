@@ -5,14 +5,18 @@
  */
 package vista;
 
+import analisis2.Analisis2;
+import idioma.Idioma;
+
 /**
  *
  * @author rocka
  */
 public class ComboBoxModulo extends ComboBox{
-     
+     private Idioma idioma;
     public ComboBoxModulo() {
         super();
+        this.idioma=Analisis2.idioma;
         this.item();
         this.evento();
     }
@@ -23,11 +27,11 @@ public class ComboBoxModulo extends ComboBox{
     }
     
     public void item(){
-        super.addItem("Inventario");
-        super.addItem("Ventas"); 
-        super.addItem("RRHH"); 
-        super.addItem("Usuarios");
-        super.addItem("Permisos");
+        super.addItem(this.idioma.getProperty("inventario"));
+        super.addItem(this.idioma.getProperty("ventas")); 
+        super.addItem(this.idioma.getProperty("rrhh")); 
+        super.addItem(this.idioma.getProperty("usuario"));
+        super.addItem(this.idioma.getProperty("permisos"));
         
     }
 }

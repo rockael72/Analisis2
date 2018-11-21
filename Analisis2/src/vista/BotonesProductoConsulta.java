@@ -30,9 +30,9 @@ public class BotonesProductoConsulta extends PanelConstructor {
     
     
       public void construir(){
-        super.agregarCaracteristica("Nombre",0);
-        super.agregarCaracteristica("Tipo",4);
-        super.agregarCaracteristica("Buscar",3);
+        super.agregarCaracteristica(super.idioma.getProperty("nombreproducto"),0);
+        super.agregarCaracteristica(super.idioma.getProperty("tipoproducto"),4);
+        super.agregarCaracteristica(super.idioma.getProperty("buscar"),3);
         
         
      
@@ -40,7 +40,7 @@ public class BotonesProductoConsulta extends PanelConstructor {
         
         
         Button buscar = (Button) super.getComponent(2);
-        buscar.setText("Buscar");
+        buscar.setText(super.idioma.getProperty("buscar"));
         buscar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {                
@@ -51,7 +51,7 @@ public class BotonesProductoConsulta extends PanelConstructor {
         });
         
          Button todos = (Button) super.getComponent(2);
-         todos.setText("Todos");
+         todos.setText(super.idioma.getProperty("todos"));
         todos.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {                

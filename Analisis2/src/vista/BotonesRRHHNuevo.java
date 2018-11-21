@@ -11,8 +11,8 @@ import RRHH.FactoryRRHH;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JPanel;
-import modulos.Pagos.FactoryGeneral;
-import modulos.Pagos.FactoryPagos;
+import Pagos.FactoryGeneral;
+import Pagos.FactoryPagos;
 
 /**
  *
@@ -32,8 +32,8 @@ public class BotonesRRHHNuevo extends PanelConstructor{
     
     
       public void construir(){
-        super.agregarCaracteristica("Tipo",6);
-        super.agregarCaracteristica("Agregar",3);
+        super.agregarCaracteristica(super.idioma.getProperty("tipoempleado"),6);
+        super.agregarCaracteristica(super.idioma.getProperty("agregar"),3);
      
         ComboBox t = (ComboBox) super.getComponent(0);
         t.addActionListener(new ActionListener() {

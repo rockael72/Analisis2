@@ -11,20 +11,20 @@ import RRHH.FactoryRRHH;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JPanel;
-import modulos.Pagos.DirectorPagos;
-import modulos.Pagos.FactoryGeneral;
-import modulos.Pagos.FactoryPagos;
+import Pagos.DirectorPagos;
+import Pagos.FactoryGeneral;
+import Pagos.FactoryPagos;
 
 
 /**
  *
  * @author rocka
  */
-public class BotonesPagosNuevo extends PanelConstructor{
+public class BotonesPagosNuevo2 extends PanelConstructor{
     private DirectorPanel dp;
     private Factory f;
     
-    public BotonesPagosNuevo(JPanel panel) {
+    public BotonesPagosNuevo2(JPanel panel) {
         super(panel);
         f = new FactoryPanel();
         dp = new DirectorPanel(f.factoryPanel(DirectorPanel.getPanel1(), "Fijo"));
@@ -34,8 +34,8 @@ public class BotonesPagosNuevo extends PanelConstructor{
     
     
       public void construir(){
-        super.agregarCaracteristica("Tipo",9);
-        super.agregarCaracteristica("Agregar",3);
+        super.agregarCaracteristica(super.idioma.getProperty("tipopago"),9);
+        super.agregarCaracteristica(super.idioma.getProperty("agregar"),3);
      
         ComboBox t = (ComboBox) super.getComponent(0);
         t.addActionListener(new ActionListener() {

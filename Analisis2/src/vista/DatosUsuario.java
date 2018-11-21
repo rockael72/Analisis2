@@ -12,16 +12,13 @@ import javax.swing.JPanel;
  * @author rocka
  */
 public class DatosUsuario extends PanelConstructor{
-    
     public DatosUsuario(JPanel panel) {
-        super(panel);
+        super(panel);        
     }
     
-    public void construir(){
-        super.agregarCaracteristica("Usuario ",0);
-        super.agregarCaracteristica("Password ",2);
-        
-        
+    public void construir(){        
+        super.agregarCaracteristica(super.idioma.getProperty("usuario"),0);
+        super.agregarCaracteristica(super.idioma.getProperty("contraseña"),2);                
         super.dibujar();
     }
     
