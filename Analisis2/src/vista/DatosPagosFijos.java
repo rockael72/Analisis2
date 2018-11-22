@@ -18,15 +18,15 @@ public class DatosPagosFijos extends PanelConstructor{
     }
     
       public void construir(){      
-        super.agregarCaracteristica("No pago",0);
-        super.agregarCaracteristica("Monto pagar",0);        
-        super.agregarCaracteristica("TipoPago",0);
-        super.agregarCaracteristica("Cliente",0);
-        super.agregarCaracteristica("Fecha inicial",0);        
-        super.agregarCaracteristica("Proximo pago",0);
-        super.agregarCaracteristica("Cantidad Pago",0);        
-        super.agregarCaracteristica("Monto total",0);        
-        super.agregarCaracteristica("Descripcion",1);
+        super.agregarCaracteristica(this.idioma.getProperty("nopago"),0);
+        super.agregarCaracteristica(this.idioma.getProperty("montoapagar"),0);        
+        super.agregarCaracteristica(this.idioma.getProperty("tipopago"),0);
+        super.agregarCaracteristica(this.idioma.getProperty("cliente"),0);
+        super.agregarCaracteristica(this.idioma.getProperty("fechainicio"),0);        
+        super.agregarCaracteristica(this.idioma.getProperty("proximopago"),0);
+        super.agregarCaracteristica(this.idioma.getProperty("cantidadpago"),0);        
+        super.agregarCaracteristica(this.idioma.getProperty("montototal"),0);        
+        super.agregarCaracteristica(this.idioma.getProperty("descripcion"),1);
         super.dibujar();
     }
       

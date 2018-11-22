@@ -18,11 +18,11 @@ public class DatosPagoVariable extends PanelConstructor{
     }
     
       public void construir(){      
-        super.agregarCaracteristica("No pagos",0);
-        super.agregarCaracteristica("Fecha Pago",0);        
-        super.agregarCaracteristica("Cliente",0);
-        super.agregarCaracteristica("Monto a pagar",0);                
-        super.agregarCaracteristica("Descripcion",1);
+        super.agregarCaracteristica(this.idioma.getProperty("nopago"),0);
+        super.agregarCaracteristica(this.idioma.getProperty("fechapago"),0);        
+        super.agregarCaracteristica(this.idioma.getProperty("cliente"),0);
+        super.agregarCaracteristica(this.idioma.getProperty("montoapagar"),0);                
+        super.agregarCaracteristica(this.idioma.getProperty("descripcion"),1);
         super.dibujar();
     }
     }  

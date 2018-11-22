@@ -35,8 +35,8 @@ public class BotonesProductoNuevo extends PanelConstructor{
     
     
       public void construir(){
-        super.agregarCaracteristica("Tipo",4);
-        super.agregarCaracteristica("Agregar",3);
+        super.agregarCaracteristica(super.idioma.getProperty("tipoproducto"),4);
+        super.agregarCaracteristica(super.idioma.getProperty("agregar"),3);
      
         ComboBox t = (ComboBox) super.getComponent(0);
         t.addActionListener(new ActionListener() {

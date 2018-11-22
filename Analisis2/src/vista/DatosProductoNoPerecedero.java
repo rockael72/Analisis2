@@ -19,12 +19,12 @@ public class DatosProductoNoPerecedero extends PanelConstructor {
     }
     
     public void construir(){
-        super.agregarCaracteristica("Codigo",0);
-        super.agregarCaracteristica("Nombre",0);
-        super.agregarCaracteristica("Marca",0);
-        super.agregarCaracteristica("Existencia",0);
-        super.agregarCaracteristica("Precio",0);
-        super.agregarCaracteristica("Descripcion",1);   
+        super.agregarCaracteristica(this.idioma.getProperty("codigo"),0);
+        super.agregarCaracteristica(this.idioma.getProperty("nombreproducto"),0);
+        super.agregarCaracteristica(this.idioma.getProperty("marca"),0);
+        super.agregarCaracteristica(this.idioma.getProperty("existencia"),0);
+        super.agregarCaracteristica(this.idioma.getProperty("precio"),0);
+        super.agregarCaracteristica(this.idioma.getProperty("descripcion"),1);   
         super.dibujar();
     }
     

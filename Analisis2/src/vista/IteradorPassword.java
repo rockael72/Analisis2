@@ -5,6 +5,8 @@
  */
 package vista;
 
+import analisis2.Analisis2;
+import idioma.Idioma;
 import java.awt.Component;
 import java.util.ArrayList;
 
@@ -20,10 +22,11 @@ public class IteradorPassword {
     private int i ;
     private int x;
     private int y;
+    private Idioma idioma;
             
     
     public IteradorPassword(){
-        
+        this.idioma=Analisis2.idioma;
         this.label= new ArrayList<Label>();
         this.passwordBox = new ArrayList<Object>();
         this.posicionY=new ArrayList<Integer>();
@@ -40,7 +43,7 @@ public class IteradorPassword {
             
             case 2: return new PasswordBox();
             
-            case 3: return new Button("Aceptar");
+            case 3: return new Button(this.idioma.getProperty("aceptar"));
             
             case 4: return new ComboBoxCompra();
                                     
