@@ -17,6 +17,7 @@ public class DatosUsuario extends PanelConstructor{
     }
     
     public void construir(){        
+        super.agregarCaracteristica(super.idioma.getProperty("empresa"),0);
         super.agregarCaracteristica(super.idioma.getProperty("usuario"),0);
         super.agregarCaracteristica(super.idioma.getProperty("contraseña"),2);                
         super.dibujar();

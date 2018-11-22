@@ -5,6 +5,7 @@
  */
 package analisis2;
 
+import conexion.Conexion;
 import java.awt.Color;
 import javax.swing.UIManager;
 import proyecto.Login;
@@ -24,6 +25,9 @@ public class Analisis2 {
     public static Idioma idioma;
     public static void main(String[] args) {
         // TODO code application logic here
+       // Conexion.crearConexion();
+        
+        
         
         idioma= new Idioma("Ingles");
         UIManager.put("nimbusBase", new Color(51, 98, 140));// sombras menu
