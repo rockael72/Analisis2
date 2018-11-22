@@ -18,13 +18,13 @@ public class DatosEmpleadoFijo extends PanelConstructor{
     }
     
       public void construir(){        
-        super.agregarCaracteristica("Nombre",0);
-        super.agregarCaracteristica("Edad",0);                
-        super.agregarCaracteristica("Teléfono",0);
-        super.agregarCaracteristica("Puesto",0);
-        super.agregarCaracteristica("Salario",0);
-        super.agregarCaracteristica("Jornada",0);        
-        super.agregarCaracteristica("Descripcion",1);
+        super.agregarCaracteristica(this.idioma.getProperty("nombre"),0);
+        super.agregarCaracteristica(this.idioma.getProperty("edad"),0);                
+        super.agregarCaracteristica(this.idioma.getProperty("telefono"),0);
+        super.agregarCaracteristica(this.idioma.getProperty("puesto"),0);
+        super.agregarCaracteristica(this.idioma.getProperty("salario"),0);
+        super.agregarCaracteristica(this.idioma.getProperty("jornada"),0);        
+        super.agregarCaracteristica(this.idioma.getProperty("descripcion"),1);
         super.dibujar();
     }
       }

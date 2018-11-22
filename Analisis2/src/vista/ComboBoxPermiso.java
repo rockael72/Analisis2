@@ -5,14 +5,18 @@
  */
 package vista;
 
+import analisis2.Analisis2;
+import idioma.Idioma;
+
 /**
  *
  * @author rocka
  */
 public class ComboBoxPermiso extends ComboBox{
-     
+     private Idioma idioma;
     public ComboBoxPermiso() {
         super();
+        this.idioma=Analisis2.idioma;
         this.item();
         this.evento();
     }
@@ -23,9 +27,9 @@ public class ComboBoxPermiso extends ComboBox{
     }
     
     public void item(){
-        super.addItem("Administrador");
-        super.addItem("Restringido"); 
-        super.addItem("Oculto"); 
+        super.addItem(this.idioma.getProperty("administrador"));
+        super.addItem(this.idioma.getProperty("restringido")); 
+        super.addItem(this.idioma.getProperty("oculto")); 
         
     }
 }

@@ -18,12 +18,12 @@ public class DatosEmpleadoNominal extends PanelConstructor{
     }
     
       public void construir(){      
-        super.agregarCaracteristica("Nombre",0);
-        super.agregarCaracteristica("Pago",0);        
-        super.agregarCaracteristica("Teléfono",0);
-        super.agregarCaracteristica("TiempoEstimado",0);
-        super.agregarCaracteristica("Fecha Inicio",0);        
-        super.agregarCaracteristica("Descripcion",1);
+        super.agregarCaracteristica(this.idioma.getProperty("nombre"),0);
+        super.agregarCaracteristica(this.idioma.getProperty("pago"),0);        
+        super.agregarCaracteristica(this.idioma.getProperty("telefono"),0);
+        super.agregarCaracteristica(this.idioma.getProperty("tiempoestimado"),0);
+        super.agregarCaracteristica(this.idioma.getProperty("fechainicio"),0);        
+        super.agregarCaracteristica(this.idioma.getProperty("descripcion"),1);
         super.dibujar();
     }
       
